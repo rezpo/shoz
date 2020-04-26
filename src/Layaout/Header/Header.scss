@@ -1,0 +1,39 @@
+@import '../../Styles/Global.scss';
+
+.Container {
+  &__header {
+
+    &-wrapper {
+      @include flex-between;
+      padding: 1rem 0;
+    }
+
+    &-logo {
+      width: 10%;
+
+      svg {
+        width: 60%;
+      }
+    }
+
+    &-menu {
+      @include flex-between;
+      width: 10%;
+
+      .block {
+        width: 50%;
+        padding: 0 .5rem;
+
+        .item {
+          width: 100%;
+          cursor: pointer;
+          transition: .2s ease-in-out;
+
+          &:hover {
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+}

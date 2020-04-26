@@ -1,0 +1,38 @@
+@import '../../Styles/Global.scss';
+
+.Container {
+  &__quickreview {
+    &-wrapper {
+      @include flex-between;
+      position: relative;
+      width: 100%;
+      left: 0;
+      margin: 4rem 0 8rem 0;
+    }
+
+    &-counter {
+      background: $yellow;
+      width: 45%;
+      height: 30rem;
+
+      .product {
+        width: 28%;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(0, -50%);
+      }
+    }
+
+    &-review {
+      background: $white;
+      width: 55%;
+      padding: 1rem 2rem;
+
+      .note {
+        width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
