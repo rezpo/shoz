@@ -10,7 +10,7 @@ export default class Catalog extends Component {
     super(props);
     this.state = {
       shoes: []
-    };
+    }
   }
 
   getData = async () => {

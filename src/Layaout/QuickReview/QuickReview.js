@@ -1,36 +1,64 @@
 import React, { Component } from 'react'
 import './QuickReview.scss'
 import Button from '../../Components/Button/Button'
+import Client from '../../Contentful'
 
 export default class Quick_review extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Cillum minim in adipisicing',
-      review: 'Aliqua pariatur est ipsum ex labore. Quis culpa dolore ex dolor commodo veniam qui et tempor. Eiusmod anim labore deserunt proident nostrud est nostrud commodo quis deserunt nisi id reprehenderit. Commodo ut quis aliqua aute enim sint elit nulla dolor ad ea deserunt deserunt.'
+      newReview: []
     }
+  }
+
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: 'newProductReview'
+      })
+
+      this.setState({
+        newReview: response.items
+      })
+
+    } catch (error) {
+
+    }
+  }
+
+  componentDidMount() {
+    this.getData()
   }
 
   render() {
 
-    let { review, title } = this.state
+    let { newReview } = this.state
 
     return (
       <div className='Container__quickreview-wrapper'>
-        <div className='Container__quickreview-counter'>
-          <img src='https://www.dropbox.com/s/h3ljmsyd8imshps/new-in-shoz-product.png?raw=1' class='product' alt='New product review' />
-        </div>
-        <div className='Container__quickreview-review'>
-          <div className='note'>
-            <h1>{title}</h1>
-            <p>{review}</p>
-            <Button
-              subject='secondary'
-              text="I'm Interested"
-            />
-          </div>
-        </div>
+        {newReview.map((item, index) => {
+
+          let items = item.fields
+
+          return (
+            <div className='Container__quickreview-window'>
+              <div className='Container__quickreview-counter'>
+                <img src={items.photoUrl} class='product' alt='New product review' />
+              </div>
+              <div className='Container__quickreview-review'>
+                <div className='note'>
+                  <h1>{items.title}</h1>
+                  <p>{items.review}</p>
+                  <Button
+                    subject='secondary'
+                    text="I'm Interested"
+                  />
+                </div>
+              </div>
+            </div>
+          )
+        })}
       </div>
     )
   }
