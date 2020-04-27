@@ -42,16 +42,16 @@ export default class Footer extends Component {
           <div className='brand'>
             <Logo />
             <ul className='rss-list'>
-              <li className='rss'><a href='#' className='anchor'><AiFillInstagram size='1.1em' /></a></li>
-              <li className='rss'><a href='#' className='anchor'><FaFacebookF size='1.1em' /></a></li>
-              <li className='rss'><a href='#' className='anchor'><FaYoutube size='1.1em' /></a></li>
+              <li className='rss'><a href='/' className='anchor'><AiFillInstagram size='1.1em' /></a></li>
+              <li className='rss'><a href='/' className='anchor'><FaFacebookF size='1.1em' /></a></li>
+              <li className='rss'><a href='/' className='anchor'><FaYoutube size='1.1em' /></a></li>
             </ul>
           </div>
           <div className='block'>
             <ul className='menu'>
               {company.map(item => {
                 return (
-                  <li className='item'><a className='anchor' href='#'>{item}</a></li>
+                  <li className='item' key={item}><a className='anchor' href='/'>{item}</a></li>
                 )
               })}
             </ul>
@@ -60,7 +60,7 @@ export default class Footer extends Component {
             <ul className='menu'>
               {client.map(item => {
                 return (
-                  <li className='item'><a className='anchor' href='#'>{item}</a></li>
+                  <li className='item' key={item}><a className='anchor' href='/'>{item}</a></li>
                 )
               })}
             </ul>
@@ -69,7 +69,7 @@ export default class Footer extends Component {
             <ul className='menu'>
               {legal.map(item => {
                 return (
-                  <li className='item'><a className='anchor' href='#'>{item}</a></li>
+                  <li className='item' key={item}><a className='anchor' href='/'>{item}</a></li>
                 )
               })}
             </ul>

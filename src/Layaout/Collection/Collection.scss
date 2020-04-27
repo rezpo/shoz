@@ -32,6 +32,7 @@
           background: $white;
           cursor: pointer;
           position: relative;
+          border-radius: .5rem;
 
           .picture {
             width: 100%;
@@ -39,6 +40,7 @@
             transition: .2s ease-in-out;
             display: block;
             margin: auto 0;
+            border-radius: .5rem;
 
             &:hover {
               opacity: 1;

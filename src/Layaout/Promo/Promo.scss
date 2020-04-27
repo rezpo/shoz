@@ -20,6 +20,16 @@
         left: 50%;
         bottom: 5rem;
         transform: translate(-50%, 0);
+
+        .title {
+          color: $blue;
+          font-size: $size-L + .5rem;
+          text-shadow: 0 .2rem .8rem rgba($color: $pink, $alpha: .8);
+        }
+
+        .getpromo {
+          margin: .5rem auto;
+        }
       }
 
     }

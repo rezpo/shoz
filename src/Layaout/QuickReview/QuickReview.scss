@@ -8,6 +8,8 @@
       width: 100%;
       left: 0;
       margin: 4rem 0 8rem 0;
+      background-image: url('https://www.dropbox.com/s/m4lkbi7nepcdce7/bg-pattern.png?raw=1');
+      background-repeat: repeat;
     }
 
     &-counter {
@@ -25,7 +27,6 @@
     }
 
     &-review {
-      background: $white;
       width: 55%;
       padding: 1rem 2rem;
 

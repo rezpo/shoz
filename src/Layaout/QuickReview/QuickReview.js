@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Quick_review.scss'
+import './QuickReview.scss'
 import Button from '../../Components/Button/Button'
 
 export default class Quick_review extends Component {
@@ -19,7 +19,7 @@ export default class Quick_review extends Component {
     return (
       <div className='Container__quickreview-wrapper'>
         <div className='Container__quickreview-counter'>
-          <img src='https://via.placeholder.com/700x500' class='product' alt='New product review' />
+          <img src='https://www.dropbox.com/s/h3ljmsyd8imshps/new-in-shoz-product.png?raw=1' class='product' alt='New product review' />
         </div>
         <div className='Container__quickreview-review'>
           <div className='note'>

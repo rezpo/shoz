@@ -12,7 +12,7 @@ export default class Menu extends Component {
         'Irure',
         'Consequat',
         'Proident',
-        'Irure'
+        'Monsete'
       ]
     };
   }
@@ -24,9 +24,9 @@ export default class Menu extends Component {
     return (
       <div className='Container__menu-wrapper'>
         <ul className='Container__menu-categories'>
-          {menu.map(item => {
+          {menu.map((item, index) => {
             return (
-              <li className='category'><a href='#' className='anchor'>{item}</a></li>
+              <li className='category' key={index}><a href='/' className='anchor'>{item}</a></li>
             )
           })}
         </ul>
