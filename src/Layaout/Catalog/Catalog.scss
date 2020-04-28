@@ -3,6 +3,22 @@
 .Container {
   &__catalog {
 
+    &-filter {
+      .filter {
+        @include flex-end;
+
+        .option {
+          margin-left: 1rem;
+          cursor: pointer;
+          transition: .2s ease-in-out;
+
+          &:hover {
+            color: $pink;
+          }
+        }
+      }
+    }
+
     &-wrapper {
       @include flex-between;
     }
