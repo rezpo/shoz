@@ -3,6 +3,11 @@
 .Container {
   &__collection {
     &-wrapper {
+      width: 100%;
+      padding: 5rem 0;
+    }
+
+    &-window {
       @include flex-evenly;
       width: 100%;
     }

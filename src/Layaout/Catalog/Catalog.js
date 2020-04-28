@@ -17,13 +17,12 @@ export default class Catalog extends Component {
     try {
       let response = await Client.getEntries({
         content_type: 'product',
+        select: 'fields,sys.id',
         order: 'fields.price'
       })
 
-      await Client.getAssets()
-
       this.setState({
-        shoes: response.items
+        shoes: response.items,
       })
 
     } catch (error) {

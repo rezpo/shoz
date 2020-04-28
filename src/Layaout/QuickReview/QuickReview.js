@@ -22,9 +22,7 @@ export default class Quick_review extends Component {
         newReview: response.items
       })
 
-    } catch (error) {
-
-    }
+    } catch (error) {}
   }
 
   componentDidMount() {
@@ -42,7 +40,7 @@ export default class Quick_review extends Component {
           let items = item.fields
 
           return (
-            <div className='Container__quickreview-window'>
+            <div className='Container__quickreview-window' key={index}>
               <div className='Container__quickreview-counter'>
                 <img src={items.photoUrl} class='product' alt='New product review' />
               </div>
