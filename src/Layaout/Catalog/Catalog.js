@@ -9,16 +9,14 @@ export default class Catalog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      shoes: [],
-      order: 'fields.price'
+      shoes: []
     }
   }
   getData = async () => {
     try {
       let response = await Client.getEntries({
         content_type: 'product',
-        select: 'fields,sys.id',
-        order: this.state.order
+        select: 'fields,sys.id'
       })
 
       this.setState({
@@ -36,7 +34,7 @@ export default class Catalog extends Component {
   }
 
   render() {
-    let { shoes, order } = this.state
+    let { shoes } = this.state
 
     return (
       <div className="Container__catalog-filter">

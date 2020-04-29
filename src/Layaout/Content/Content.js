@@ -40,6 +40,8 @@ export default class Content extends Component {
 
           if (isActive === 'Active') {
             return <Catalog />
+          } else {
+            return null
           }
 
         })}
